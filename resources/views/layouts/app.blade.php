@@ -64,8 +64,8 @@
                 <div class="container">
                     <div class="card bg-dark text-light">   
                         @if ($title)                      
-                            <div class="card-header bg-dark text-light">
-                                <h4>{{$title}}</h4>
+                            <div class="card-header bg-dark text-light border-0 pb-0">
+                                <h4 class="mb-0 border-bottom border-light">{{$title}}</h4>
                             </div>
                         @endif
                         @yield('content')
@@ -78,10 +78,10 @@
             @endif
         </main>
         <footer class="footer mt-auto py-1 bg-dark text-light">
-            <div class="container">
-                <span class="text-muted">
+            <div class="container-fluid">
+                <small class="text-muted">
                     @include('common.icon', ['icon'=>'copyright']) Adam Hayward {{ date('Y') }} 
-                </span>
+                </small>
             </div>
         </footer>
         @livewireScripts

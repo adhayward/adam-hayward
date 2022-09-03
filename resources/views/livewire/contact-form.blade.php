@@ -3,12 +3,15 @@
     @csrf
     <div class="card-body">
         @if ($success)
-            <div class="inline-flex w-full ml-3 overflow-hidden bg-white rounded-lg shadow-sm">
-                <div class="flex items-center justify-center w-12 bg-green-500">
-                </div>
-                <div class="px-3 py-2 text-left">
-                    <span class="font-semibold text-green-500">Success</span>
-                    <p class="mb-1 text-sm leading-none text-gray-500">{{ $success }}</p>
+            <div class="alert alert-success">
+                <div class="row">
+                    <div class="col">
+                        <h5>Success</h5>
+                        <div>{{ $success }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 </div>
             </div>
         @endif
@@ -28,7 +31,7 @@
                     @enderror
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row">
                 <div class='col'>
                     <textarea wire:model="comment" rows="8" class="form-control" name="comment" placeholder="Your message here...">{{ old('comment') }}</textarea>
                     @error('comment')
@@ -37,7 +40,7 @@
                 </div>
             </div>
     </div>
-    <div class="card-footer d-flex">
+    <div class="card-footer d-flex pt-0 border-0">
         <button class="btn btn-primary col-auto mx-auto" type="submit">
             @include('common.icon', ['icon'=>'paper-plane']) Send
         </button>
