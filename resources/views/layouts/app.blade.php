@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Adam Hayward | Software Developer</title>
+        <title>Adam Hayward | Software Developer {{ ($title??false) ? (' | '.$title) : '' }}</title>
  
         <link rel="icon" type="image/x-icon" href="{{ URL::to('img/logo.png')  }}">
         <link rel="stylesheet" href="{{ URL::to('css/app.css')  }}">
@@ -32,10 +32,13 @@
                 <div class="container">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                            
-                            <li class="nav-item dropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ URL::to('personal') }}">About Me</a>
+                            </li>
+
+                            <li class="nav-item dropdown mx-lg-4">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Projects
+                                    My Projects
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="{{ URL::to('projects/uniform') }}">Uniform Management System</a></li>
@@ -44,13 +47,10 @@
                                     <li><a class="dropdown-item" href="{{ URL::to('projects/order') }}">Order Management System</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="{{ URL::to('projects/warehouse') }}">Warehouse Scanner App</a></li>
-                                    <li><a class="dropdown-item" href="{{ URL::to('projects/survey') }}">Event Score/Survey</a></li>
+                                    <li><a class="dropdown-item" href="{{ URL::to('projects/survey') }}">Event Scoreboard/Survey</a></li>
                                 </ul>
                             </li>
                             
-                            <li class="nav-item mx-lg-4">
-                                <a class="nav-link" href="{{ URL::to('personal') }}">Personal</a>
-                            </li>
                             
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ URL::to('contact') }}">Contact</a>
@@ -60,9 +60,22 @@
                 </div>
             </nav>
         
-            <div class="container">
-                @yield('content')
-            </div>
+            @if (isset($title)) 
+                <div class="container">
+                    <div class="card bg-dark text-light">   
+                        @if ($title)                      
+                            <div class="card-header bg-dark text-light">
+                                <h4>{{$title}}</h4>
+                            </div>
+                        @endif
+                        @yield('content')
+                    </div>
+                </div>
+            @else
+                <div class="container">
+                    @yield('content')
+                </div>
+            @endif
         </main>
         <footer class="footer mt-auto py-1 bg-dark text-light">
             <div class="container">
