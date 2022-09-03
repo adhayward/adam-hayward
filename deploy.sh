@@ -1,8 +1,7 @@
 deployTo=~/adam-hayward.co.uk
-cd $deployTo
-rm -rf !(".env")
+rm -rf $deployTo/*
 /bin/rsync --delete -r -exclude=.git,.cpanel.yml,.externalScripts ~/repositories/adam-hayward/* $deployTo
-
+cp ~/env-config.txt $deployTo/.env
 echo Deployed Source
 cd $deployTo
 
