@@ -1,11 +1,10 @@
-
-rm -rf public_html/*
-/bin/rsync --delete -r -exclude=.git,.cpanel.yml,.externalScripts ~/repositories/adam-hayward/* public_html
+deployTo=~/public_html
+rm -rf $deployTo/*
+/bin/rsync --delete -r -exclude=.git,.cpanel.yml,.externalScripts ~/repositories/adam-hayward/* $deployTo
 
 echo Deployed Source
-echo Creating SymLinks
-cd public_html
+cd $deployTo
 
-echo Running Composer
+echo Installing Dependancies
 composer install
 npm install
