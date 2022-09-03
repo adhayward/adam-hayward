@@ -1,6 +1,5 @@
 
-rm -rf public_html
-mkdir public_html
+rm -rf public_html/*
 /bin/rsync --delete -r -exclude=.git,.cpanel.yml,.externalScripts ~/repositories/adam-hayward/* public_html
 
 echo Deployed Source
