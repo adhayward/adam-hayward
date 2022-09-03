@@ -1,0 +1,70 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Bad+Script&family=Lato&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {    
+    height: 100vh;
+    background: $dark;
+}
+.task-table {
+    margin-bottom: 0;
+    tr:last-of-type 
+    {
+        td {
+            border-bottom: none;
+        }
+    }
+}
+$blur: 8px;
+.bg-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur($blur) brightness(60%);
+    -webkit-filter: blur($blur) brightness(60%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.navbar {
+    color: #FFFFFF;
+    .navbar-brand {
+        text-align: center;
+        .ah {
+            color: $white;
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Bad Script', sans-serif;
+        }
+        img {
+            height: 80px;
+            vertical-align: bottom;
+            margin: 0 0.5rem;
+        }
+        .sd {
+            color: $white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: $headings-font-family;
+        }
+    }
+    .nav-item {
+        .nav-link {
+            font-family: $headings-font-family;
+            color: $white;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: #FFFFFF07;
+                border-bottom-color: $white;
+            }
+        }
+    }
+}
