@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="{{ URL::to('img/logo.png')  }}">
         <link rel="stylesheet" href="{{ URL::to('css/app.css')  }}">
         <script src="{{ URL::to('js/app.js') }}"></script>
+        <script src="https://kit.fontawesome.com/99a68ae818.js" crossorigin="anonymous"></script>
         @livewireStyles
     </head>
  

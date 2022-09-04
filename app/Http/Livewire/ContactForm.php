@@ -28,7 +28,7 @@ class ContactForm extends Component
                 'comment' => $this->comment,
             ],
             function($message){
-                $message->to(env('CONTACT_TO_EMAIL', ''))->subject('Adam-Hayward.co.uk Contact Form');
+                $message->subject('Adam-Hayward.co.uk Contact Form');
                 $message->replyTo($this->email);
             }
         );
