@@ -1,7 +1,24 @@
-@extends('layouts.app', ['title'=>false])
+@extends('layouts.home')
  
 @section('content')
-        <div class="card-body">
-            <div>I am a highly skilled software developer with 12 years’ experience writing applications using a wide variety of technologies, with a focus on PHP applications for the last 7 years. My time at Cuskit Limited has granted me opportunities to work on all aspects of projects, from initial planning meetings through to testing and deployment. As a natural problem solver, I thrive in creating unique solution to the needs of our users. I am very passionate about innovation and am always looking towards the latest tools and technologies to improve the work I do.</div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+            <img class="w-100" src="{{ URL::to('/img/logo.svg') }}" />
         </div>
+        <div class="col">
+            <div class="card rounded-5">
+                <div class="card-body text-center">
+                    <h1 class="ah border-bottom border-light">Adam Hayward</h1>
+                    <h3 class="sd">Software Developer</h3>
+                    <br>
+                    <p class="lead">
+                        I am a software developer based in Birmingham, UK.<br>
+                        For the last 12 years’ I have been developing applications for a variety of platforms and I am looking for the next exciting project to be a part of.
+                    </p>
+                </div>
+            </div>
+        <div/>
+        
+    </div>
 @endsection

@@ -2,6 +2,7 @@
 <form wire:submit.prevent="contactFormSubmit" action="/contact" method="POST">
     @csrf
     <div class="card-body">
+        <p>I am actively looking for new employment at this time.<br>If you are interested in hiring me please get in touch using the form below.</p>
         @if ($success)
             <div class="alert alert-success">
                 <div class="row">
