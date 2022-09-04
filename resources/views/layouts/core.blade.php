@@ -8,7 +8,8 @@
  
         <link rel="icon" type="image/x-icon" href="{{ URL::to('img/logo.png')  }}">
         <link rel="stylesheet" href="{{ URL::to('css/app.css')  }}">
-        <script src="{{ URL::to('js/app.js') }}"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/99a68ae818.js" crossorigin="anonymous"></script>
         @livewireStyles
     </head>
