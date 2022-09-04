@@ -48,7 +48,7 @@
         
             @if (isset($title)) 
                 <div class="container">
-                    <div class="card mb-4">   
+                    <div class="card rounded-5 mb-4">   
                         @if ($title)                      
                             <div class="card-header border-0 pb-0">
                                 <h4 class="mb-0 border-bottom border-light">{{$title}}</h4>
